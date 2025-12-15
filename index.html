@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title> Staff FPD 2026</title>
+    <title>Pengumuman Staff FPD 2026</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -10,15 +10,12 @@
             padding: 30px;
         }
         .box {
-            max-width: 450px;
+            max-width: 480px;
             background: white;
             margin: auto;
             padding: 25px;
             border-radius: 8px;
             text-align: center;
-        }
-        h2 {
-            margin-bottom: 10px;
         }
         input {
             width: 100%;
@@ -26,12 +23,12 @@
             margin: 8px 0;
         }
         button {
-            padding: 10px 20px;
+            width: 100%;
+            padding: 10px;
             background: #1e3a8a;
             color: white;
             border: none;
             cursor: pointer;
-            width: 100%;
             margin-top: 10px;
         }
         .hasil {
@@ -44,12 +41,16 @@
         .tidak {
             color: red;
         }
+        .divisi {
+            margin-top: 10px;
+            color: #1e3a8a;
+        }
     </style>
 </head>
 <body>
 
 <div class="box">
-    <h2>Cek Kelulusan Staff FPD 2026</h2>
+    <h2>Pengumuman Staff FPD 2026</h2>
     <p>Masukkan nama lengkap dan asal sekolah</p>
 
     <input type="text" id="nama" placeholder="Nama Lengkap">
@@ -61,66 +62,58 @@
 </div>
 
 <script>
-    // ===============================
-    // DATA LOLOS STAFF FPD 2026
-    // ===============================
-    const dataLolos = [
-        { nama: "INDRA SETIAWAN", sekolah: "SMA 2 PINRANG" },
-        { nama: "ABIL SAFAAT", sekolah: "SMK 5 PINRANG" },
-        { nama: "DIAN ADE PUTRI", sekolah: "SMA 2 PINRANG" },
-        { nama: "JULIANTI", sekolah: "SMA 2 PINRANG" },
-        { nama: "AISYA ALYA", sekolah: "SMA 2 PINRANG" },
-        { nama: "AULIA CITRA ANUGRAH", sekolah: "SMA 2 PINRANG" },
-        { nama: "AFDAL RUDI", sekolah: "SMA 2 PINRANG" },
-        { nama: "AZIZUL ISMI UMAR", sekolah: "SMK 5 PINRANG" },
-        { nama: "JUMRIAH", sekolah: "SMA 2 PINRANG" },
-        { nama: "KHAIRUN NISA", sekolah: "SMK 5 PINRANG" },
-        { nama: "KAMELIANI", sekolah: "SMK 5 PINRANG" },
-        { nama: "MUHAMMAD TAUFIQ", sekolah: "SMA 2 PINRANG" },
-        { nama: "NUR FITRA RAMADHANI", sekolah: "SMK 5 PINRANG" },
-        { nama: "REHAN", sekolah: "SMA 2 PINRANG" },
-        { nama: "RIANA", sekolah: "SMA 2 PINRANG" },
-        { nama: "SAKINAH", sekolah: "SMA 2 PINRANG" },
-        { nama: "YANA", sekolah: "SMA 2 PINRANG" },
-        { nama: "ABDUL FATTA RIFAI", sekolah: "SMA 2 PINRANG" },
-        { nama: "AKBAR", sekolah: "SMA 2 PINRANG" },
-        { nama: "DANIA AMIRAH", sekolah: "SMK 5 PINRANG" },
-        { nama: "MELYSAH", sekolah: "SMA 2 PINRANG" },
-        { nama: "MUH SAING", sekolah: "SMA 2 PINRANG" },
-        { nama: "MUH ILYAS", sekolah: "SMA 2 PINRANG" },
-        { nama: "NUR FAIDAH", sekolah: "SMA 2 PINRANG" },
-        { nama: "NUR ALAMSYAH ILHAM", sekolah: "SMA 2 PINRANG" },
-        { nama: "NURUL MAGHFIRAH", sekolah: "SMK 5 PINRANG" },
-        { nama: "RESKY NUR AZYFAH", sekolah: "SMA 2 PINRANG" },
-        { nama: "RADIATUL MUNAWARRAH", sekolah: "SMA 2 PINRANG" },
-        { nama: "TIWI LESTARI", sekolah: "SMA 2 PINRANG" },
-        { nama: "ZAZKIA RAMADHANI", sekolah: "SMK 5 PINRANG" },
-        { nama: "ANUGRAH ALAM", sekolah: "SMA 2 PINRANG" },
-        { nama: "EVIANA KARINA", sekolah: "SMA 2 PINRANG" },
-        { nama: "NURAULIA", sekolah: "SMA 2 PINRANG" },
-        { nama: "PANI", sekolah: "SMK 5 PINRANG" },
-        { nama: "RESKY HELL YANTII", sekolah: "SMK 5 PINRANG" },
-        { nama: "SAFNI MAULANA ASRIADI", sekolah: "SMA 2 PINRANG" },
-        { nama: "SYARIDAH", sekolah: "SMA 2 PINRANG" },
-        { nama: "WAHYUNI", sekolah: "SMA 2 PINRANG" },
-        { nama: "WAHYULIA", sekolah: "SMK 5 PINRANG" }
-    ];
+const dataStaff = [
+    { nama:"INDRA SETIAWAN", sekolah:"SMA 2 PINRANG", divisi:"KETUA PANITIA" },
+    { nama:"DIAN ADE PUTRI", sekolah:"SMA 2 PINRANG", divisi:"SEKRETARIS" },
+    { nama:"JULIANTI", sekolah:"SMA 2 PINRANG", divisi:"BENDAHARA" },
+    { nama:"AISYA ALYA", sekolah:"SMA 2 PINRANG", divisi:"MEDIA INFORMATION" },
+    { nama:"AULIA CITRA ANUGRAH", sekolah:"SMA 2 PINRANG", divisi:"ENERGY SUPPLY" },
+    { nama:"AFDAL RUDI", sekolah:"SMA 2 PINRANG", divisi:"OPERASIONAL" },
+    { nama:"AZIZUL ISMI UMAR", sekolah:"SMK 5 PINRANG", divisi:"EVENT" },
+    { nama:"JUMRIAH", sekolah:"SMA 2 PINRANG", divisi:"FUNDRAISING" },
+    { nama:"KHAIRUN NISA", sekolah:"SMK 5 PINRANG", divisi:"ENERGY SUPPLY" },
+    { nama:"KAMELIANI", sekolah:"SMK 5 PINRANG", divisi:"PUBLIC RELATIONS" },
+    { nama:"MUHAMMAD TAUFIQ", sekolah:"SMA 2 PINRANG", divisi:"LOGISTIK" },
+    { nama:"NUR FITRA RAMADHANI", sekolah:"SMK 5 PINRANG", divisi:"FUNDRAISING" },
+    { nama:"REHAN", sekolah:"SMA 2 PINRANG", divisi:"EVENT" },
+    { nama:"SAKINAH", sekolah:"SMA 2 PINRANG", divisi:"EVENT" },
+    { nama:"YANA", sekolah:"SMA 2 PINRANG", divisi:"PUBLIC RELATIONS" },
+    { nama:"ABDUL FATTA RIFAI", sekolah:"SMA 2 PINRANG", divisi:"LIAISON OFFICER" },
+    { nama:"AKBAR", sekolah:"SMA 2 PINRANG", divisi:"LOGISTIK" },
+    { nama:"DANIA AMIRAH", sekolah:"SMK 5 PINRANG", divisi:"LIAISON OFFICER" },
+    { nama:"MELYSAH", sekolah:"SMA 2 PINRANG", divisi:"PUBLIC RELATIONS" },
+    { nama:"MUH.SAING", sekolah:"SMA 2 PINRANG", divisi:"OPERASIONAL" },
+    { nama:"MUH.ILYAS", sekolah:"SMA 2 PINRANG", divisi:"LOGISTIK" },
+    { nama:"NUR FAIDAH", sekolah:"SMA 2 PINRANG", divisi:"DATA MANAGEMENT" },
+    { nama:"NUR ALAMSYAH ILHAM", sekolah:"SMA 2 PINRANG", divisi:"OPERASIONAL" },
+    { nama:"NURUL MAGHFIRAH", sekolah:"SMK 5 PINRANG", divisi:"EVENT" },
+    { nama:"RESKY NUR AZYFAH", sekolah:"SMA 2 PINRANG", divisi:"MEDIA INFORMATION" },
+    { nama:"RADIATUL MUNAWARRAH", sekolah:"SMA 2 PINRANG", divisi:"ENERGY SUPPLY" },
+    { nama:"TIWI LESTARI", sekolah:"SMA 2 PINRANG", divisi:"DATA MANAGEMENT" },
+    { nama:"ZAZKIA RAMADHANI", sekolah:"SMK 5 PINRANG", divisi:"DATA MANAGEMENT" }
+];
 
-    function cekKelulusan() {
-        const namaInput = document.getElementById("nama").value.toUpperCase().trim();
-        const sekolahInput = document.getElementById("sekolah").value.toUpperCase().trim();
-        const hasil = document.getElementById("hasil");
+function cekKelulusan() {
+    const nama = document.getElementById("nama").value.toUpperCase().trim();
+    const sekolah = document.getElementById("sekolah").value.toUpperCase().trim();
+    const hasil = document.getElementById("hasil");
 
-        const ditemukan = dataLolos.find(d =>
-            d.nama === namaInput && d.sekolah === sekolahInput
-        );
+    const ditemukan = dataStaff.find(d =>
+        d.nama === nama && d.sekolah === sekolah
+    );
 
-        if (ditemukan) {
-            hasil.innerHTML = "🎉 SELAMAT! ANDA <span class='lolos'>LOLOS</span> SEBAGAI STAFF FPD 2026/HUBUNGI NOMOR INI UNTUK INFO LEBIH LANJUT 082193374985";
-        } else {
-            hasil.innerHTML = "❌ MAAF, DATA ANDA BELUM SESUAI <span class='tidak'>TIDAK LOLOS/ Mohon cek kembali penulisan nama lengkap dan asal sekolah tanpa tanda baca</span>";
-        }
+    if (ditemukan) {
+        hasil.innerHTML = `
+            🎉 <span class="lolos">SELAMAT, ANDA LOLOS</span><br>
+            <div class="divisi">Divisi: <b>${ditemukan.divisi}</b></div>
+        `;
+    } else {
+        hasil.innerHTML = `
+            ❌ <span class="tidak">MAAF, DATA ANDA TIDAK DITEMUKAN</span><br>
+            <small>Silakan cek kembali penulisan nama dan asal sekolah tanpa tanda baca.</small>
+        `;
     }
+}
 </script>
 
 </body>
